@@ -365,9 +365,32 @@
     if((! self.bannerVisible) && self.autoShowBanner) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self __showBanner:self.adPosition atX:self.posX atY:self.posY];
+            [self resizeWebView:adView];
         });
     }
     [self fireAdEvent:EVENT_AD_LOADED withType:ADTYPE_BANNER];
+}
+
+
+/**
+ * Resizes the WebView and the banner view to fit the screen content.
+ * Bug from hack-fix of the AdMob-pro plugin regarding the StatusBar
+ */
+-(void)resizeWebView:(GADBannerView *)_adView {
+    // Resize WebView
+    CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
+    CGRect frame = self.webView.frame;
+    CGFloat height = statusBarFrame.size.height;
+
+    frame.origin.y = height;
+    frame.size.height -= frame.origin.y;
+    self.webView.frame = frame;
+
+    // Resize Ad banner
+    CGRect bannerFrame = _adView.frame;
+    bannerFrame.origin.y -= height;
+	
+    _adView.frame = bannerFrame;
 }
 
 - (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error {
