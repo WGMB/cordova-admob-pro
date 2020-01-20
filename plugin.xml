@@ -30,7 +30,7 @@
 	    <preference name="PLAY_SERVICES_VERSION" default="18.3.0"/>
 
         <!-- from play service v17.0.0, admob app id is required to avoid app crash -->
-         <preference name="ADMOB_APP_ID" default="ca-app-pub-6936022397359605~7206090652"/ 
+         <preference name="ADMOB_APP_ID" default="ca-app-pub-6936022397359605~7206090652"/> 
 
         <!-- cordova CLI using gradle and it working well -->
 	    <framework src="com.google.android.gms:play-services-ads:$PLAY_SERVICES_VERSION" />
@@ -41,7 +41,7 @@
                       android:theme="@android:style/Theme.Translucent" />
              <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
-                android:value="$ADMOB_APP_ID"/ 
+                android:value="$ADMOB_APP_ID"/> 
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET"/>
