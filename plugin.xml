@@ -27,7 +27,7 @@
     <!-- android, now build with gradle instead of ant -->
     <platform name="android">
         <!-- you can specify another play services version to avoid conflict with another plugin -->
-	    <preference name="PLAY_SERVICES_VERSION" default="16.0.0"/>
+	    <preference name="PLAY_SERVICES_VERSION" default="17.0.0"/>
 
         <!-- from play service v17.0.0, admob app id is required to avoid app crash -->
          <!--<preference name="ADMOB_APP_ID" default="ca-app-pub-6936022397359605~7206090652"/> -->
