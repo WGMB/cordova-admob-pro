@@ -26,14 +26,11 @@
 
     <preference name="ADMOB_ANDROID_APP_ID" default=""/>
     <preference name="ADMOB_IOS_APP_ID" default=""/>
-    <preference name="PLAY_SERVICES_VERSION" default="16.0.0"/>
+    <preference name="PLAY_SERVICES_VERSION" default="18.3.0"/>
 
     <!-- android, now build with gradle instead of ant -->
     <platform name="android">
         <!-- you can specify another play services version to avoid conflict with another plugin -->
-
-        <!-- from play service v17.0.0, admob app id is required to avoid app crash -->
-        <!-- preference name="ADMOB_APP_ID" default=""/ -->
 
         <!-- cordova CLI using gradle and it working well -->
 	    <framework src="com.google.android.gms:play-services-ads:$PLAY_SERVICES_VERSION" />
