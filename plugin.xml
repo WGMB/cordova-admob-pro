@@ -26,7 +26,7 @@
 
     <preference name="ADMOB_ANDROID_APP_ID" default=""/>
     <preference name="ADMOB_IOS_APP_ID" default=""/>
-    <preference name="PLAY_SERVICES_VERSION" default="18.3.0"/>
+    <preference name="PLAY_SERVICES_VERSION" default="19.0.1"/>
 
     <!-- android, now build with gradle instead of ant -->
     <platform name="android">
