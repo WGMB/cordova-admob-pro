@@ -35,7 +35,7 @@
         <!-- cordova CLI using gradle and it working well -->
 	    <framework src="com.google.android.gms:play-services-ads:$PLAY_SERVICES_VERSION" />
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <config-file target="AndroidManifest.xml" parent="application">
             <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" 
                       android:name="com.google.android.gms.ads.AdActivity"
                       android:theme="@android:style/Theme.Translucent" />
